@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply h-full overflow-x-hidden dark:text-slate-300 text-slate-600 font-normal;
+    &.light,
+    &.skin--default {
+      @apply bg-slate-100;
+    }
+    &.lght,
+    &.skin--bordered {
+      @apply bg-transparent;
+    }
+    &.dark {
+      @apply bg-[#0f172a] text-slate-300;
+    }
+  }
+  html,
+  body {
+    @apply h-full;
+  }
+
+  .ConstroPlus-app-wrapper {
+    @apply relative;
+  }
+  .single-sidebar-menu .ReactCollapse--collapse {
+    transition: height 400ms;
+  }
+  .space-xy-5 {
+    > div,
+    > button,
+    > a,
+    label,
+    > * {
+      @apply mr-2 mb-2;
+    }
+  }
+  .space-xy-6 {
+    > div,
+    > button,
+    > a,
+    label,
+    > * {
+      @apply mr-4 mb-2;
+    }
+  }
+
+  html[dir="rtl"] {
+    .recharts-wrapper {
+      direction: rtl;
+    }
+    .recharts-yAxis {
+      .recharts-text {
+        text-anchor: start;
+      }
+    }
+  }
+  .ConstroPlus-app {
+    .leaflet-control {
+      z-index: 0 !important;
+    }
+    .leaflet-control-container {
+      z-index: 555 !important;
+      position: relative;
+    }
+    .recharts-curve.recharts-tooltip-cursor {
+      display: none;
+    }
+    .recharts-wrapper.bar-chart {
+      .recharts-tooltip-cursor {
+        fill: transparent;
+      }
+    }
+    .recharts-tooltip-wrapper {
+      border: none !important;
+    }
+
+    // .recharts-cartesian-grid line,
+    // .recharts-polar-grid-angle line,
+    // .recharts-yAxis line,
+    // .recharts-xAxis line {
+    //   @apply stroke-black-200 dark:stroke-slate-700;
+    // }
+  }
+}
+@layer components {
+  @import "components/table.scss";
+  @import "components/map.scss";
+  @import "components/progress";
+  @import "components/tippy";
+  @import "components/swiper";
+  @import "components/alert";
+  @import "components/card";
+  @import "components/auth";
+  @import "components/button";
+  @import "components/badge";
+  @import "components/typography";
+  @import "components/form";
+  @import "components/input-group";
+  @import "components/react-select";
+  @import "components/pagination";
+  @import "components/breadcrumbs";
+  @import "layout/header";
+  @import "layout/footer";
+  @import "layout/sidebar";
+  @import "layout/settings";
+  @import "utility/mix";
+  @import "utility/loading";
+  @import "utility/css-animation";
+  @import "utility/calander";
+  @import "utility/full-calender";
+  @import "components/print.scss";
+}
+@layer utilities {
+}
+
+
+
+
+.latest_jobs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hotelImg {
+  width: 20%;
+}
+.shifts button {
+  border: none;
+  /* cursor: default; */
+  padding: 5px 10px;
+  // background: #ff7d3b;
+}
+.shifts button:first-child {
+  margin-right: 10px;
+}
+.posted_date {
+  display: flex;
+  justify-content: space-between;
+}
+.shifts {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+.card-subtitle i {
+  margin: 0 5px 0 0;
+}
+
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #e67929 !important;
+  color: #fff !important;
+}
+.nav-link {
+  font-weight: 600;
+}
+.nav-link i {
+  padding: 0 15px 0 0;
+  font-weight: 600;
+}
+.full-box {
+  border: 1px solid #dbdbd7;
+  border-radius: 10px;
+  box-shadow: 1px 2px 20px 2px #dbdbd7;
+}
+/* /******************** addresses *************** /
+.addressModal {
+  border: 1px solid #dbdbd7;
+  border-style: dashed;
+  border-width: 2px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  cursor: pointer;
+}
+.addressModal i {
+  font-size: 2rem;
+  color: #d6d6d6f7;
+}
+
+.viewAddress {
+  border: 1px solid #afafae;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.forDefault .defaultMark {
+  background: #6ee673;
+  width: fit-content;
+  padding: 0px 5px;
+  border-radius: 20px;
+}
+.Options a {
+  font-size: 0.8rem;
+  color: #e67929;
+}
+.Options {
+  bottom: 0;
+  padding: 10px 0 0 0;
+  color: #e67929;
+}
+.address-modal {
+  background-color: #e97730 !important;
+  color: #fff;
+}
+/ ********************** favorites */
+.favoriteHeadings {
+  background-color: rgb(233, 233, 233);
+  border: 1px solid rgb(190, 188, 188);
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+}
+
+.inStock {
+  text-align: center;
+}
+.inStock .InStock {
+  background-color: #6ee673;
+  padding: 2px 5px;
+  border-radius: 30px;
+  width: fit-content;
+}
+.ProductContent {
+  border-bottom: 1px solid rgb(233, 233, 233);
+  border-left: 1px solid rgb(233, 233, 233);
+  border-right: 1px solid rgb(233, 233, 233);
+}
+.inStock .outOfStock {
+  background-color: red;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 30px;
+  width: fit-content;
+}
+.action a {
+  border: 1px solid #b6b3b3;
+  margin: 0 0 10px 0;
+}
+.FavoriteBottom {
+  background-color: rgb(233, 233, 233);
+  border: 1px solid rgb(190, 188, 188);
+  border-radius: 0 0 5px 5px;
+}
+.myProfilePagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+.myProfilePagination a {
+  background: #bcb8b8;
+  border: 1px solid #bab8b8;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+}
+
